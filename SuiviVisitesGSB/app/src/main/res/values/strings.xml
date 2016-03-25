@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SuiviVisitesGSB</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_affiche_visites">AfficheVisites</string>
+</resources>
