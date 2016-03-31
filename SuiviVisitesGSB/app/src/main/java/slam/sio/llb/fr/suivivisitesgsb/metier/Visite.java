@@ -1,8 +1,5 @@
-package slam.sio.llb.fr.suivivisitesgsb.métier;
+package slam.sio.llb.fr.suivivisitesgsb.metier;
 
-import com.db4o.ObjectSet;
-
-import java.util.ArrayList;
 import java.util.Date;
 
 /**
