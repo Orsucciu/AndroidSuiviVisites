@@ -39,7 +39,7 @@ public class AfficheListeVisites extends Activity {
             public void onItemClick(AdapterView<?> a, View v, int position, long id) {
                 Intent i;
                 Toast.makeText(getApplicationContext(), "Choix : " + listeVisites.get(position).getId(), Toast.LENGTH_SHORT).show();
-                i = new Intent(getApplicationContext(), AfficheVisites.class);
+                i = new Intent(getApplicationContext(), AfficheVisite.class);
                 startActivity(i);
                 // Appel de l'activité AfficheVisite
                 // A compléter

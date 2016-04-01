@@ -26,6 +26,10 @@
             android:name=".AfficheListeVisites"
             android:label="@string/title_activity_affiche_liste_visites" >
         </activity>
+        <activity
+            android:name=".AfficheVisite"
+            android:label="@string/title_activity_affiche_visite" >
+        </activity>
     </application>
 
 </manifest>
