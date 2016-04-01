@@ -37,13 +37,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New Text"
+                android:text="Authentification"
                 android:id="@+id/textViewId" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New Text"
+                android:text="Visites"
                 android:id="@+id/textViewVisites"
                 android:paddingLeft="50dp" />
         </TableRow>
@@ -77,13 +77,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New Text"
+                android:text="Importer"
                 android:id="@+id/textViewImport" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New Text"
+                android:text="Exporter"
                 android:id="@+id/textViewExport"
                 android:paddingLeft="50dp" />
 

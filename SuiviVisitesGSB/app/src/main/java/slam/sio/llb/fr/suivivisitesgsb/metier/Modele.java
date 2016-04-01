@@ -45,8 +45,7 @@ public class Modele {
         open();
         ObjectSet result = dataBase.queryByExample(Visite.class);
         while (result.hasNext()){
-            retour.add((Visite)result);
-            result.next();
+            retour.add((Visite) result.next());
         }
         close();
         return retour;
@@ -87,14 +86,14 @@ public class Modele {
         open();
         ObjectSet<Visite> result = dataBase.queryByExample(Visite.class);
         if (result.size() == 0) {
-            dataBase.store(new Visite("1001", "Riera", "Alain", "14 Boulevard Maglioli 20000 Ajaccio", "0495238757"));
-            dataBase.store(new Visite("1002", "Eiden", "Pierre", "14 Rue Docteur Del Pellegrino 20090 Ajaccio", "0495208585"));
-            dataBase.store(new Visite("1003", "Ferrandi", "Frédéric", "20 Cours Napoléon 20090 Ajaccio", "0495213371"));
-            dataBase.store(new Visite("1004", "Ferrara", "Jean-Jacques", "2 Cours Grandval 20000 Ajaccio", "0495212447"));
-            dataBase.store(new Visite("1005", "Flori", "Alexandre", "Résidence Acqualonga 20167 Ajaccio", "0495100808"));
-            dataBase.store(new Visite("1006", "Franceschini", "Antoine", "14 Rue Docteur Del Pellegrino 20090 Ajaccio", "0495208585"));
-            dataBase.store(new Visite("1007", "Franchini", "Marc", "19 Cours Général Leclerc 20000 Ajaccio", "0495103695"));
-            dataBase.store(new Visite("1008", "Le Breton", "Geneviève", "28 Boulevard Pascal Rossini 20000 Ajaccio", "0495200220"));
+            dataBase.store(new Visite("1001", "Riera ", "Alain", "14 Boulevard Maglioli 20000 Ajaccio", "0495238757"));
+            dataBase.store(new Visite("1002", "Eiden ", "Pierre", "14 Rue Docteur Del Pellegrino 20090 Ajaccio", "0495208585"));
+            dataBase.store(new Visite("1003", "Ferrandi ", "Frédéric", "20 Cours Napoléon 20090 Ajaccio", "0495213371"));
+            dataBase.store(new Visite("1004", "Ferrara ", "Jean-Jacques", "2 Cours Grandval 20000 Ajaccio", "0495212447"));
+            dataBase.store(new Visite("1005", "Flori ", "Alexandre", "Résidence Acqualonga 20167 Ajaccio", "0495100808"));
+            dataBase.store(new Visite("1006", "Franceschini ", "Antoine", "14 Rue Docteur Del Pellegrino 20090 Ajaccio", "0495208585"));
+            dataBase.store(new Visite("1007", "Franchini ", "Marc", "19 Cours Général Leclerc 20000 Ajaccio", "0495103695"));
+            dataBase.store(new Visite("1008", "Le Breton ", "Geneviève", "28 Boulevard Pascal Rossini 20000 Ajaccio", "0495200220"));
             dataBase.commit();
             close();
         }

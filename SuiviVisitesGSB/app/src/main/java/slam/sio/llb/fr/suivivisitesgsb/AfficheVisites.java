@@ -10,13 +10,13 @@ public class AfficheVisites extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_affiche_visites);
+        setContentView(R.layout.activity_affiche_liste_visites);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_affiche_visites, menu);
+        getMenuInflater().inflate(R.menu.menu_affiche_liste_visites, menu);
         return true;
     }
 
