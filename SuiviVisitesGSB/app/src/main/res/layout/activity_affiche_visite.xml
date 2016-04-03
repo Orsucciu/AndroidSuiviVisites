@@ -9,7 +9,10 @@
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/scrollViewVisite" >
+        android:id="@+id/scrollViewVisite"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true">
 
         <LinearLayout
             android:orientation="vertical"
@@ -23,43 +26,177 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/TableRowNom"></TableRow>
+                    android:id="@+id/TableRowNom">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nom"
+                        android:id="@+id/nom" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="New Text"
+                        android:id="@+id/nomProspect" />
+                </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/TableRowTel"></TableRow>
+                    android:id="@+id/TableRowTel">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tel"
+                        android:id="@+id/tel" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="New Text"
+                        android:id="@+id/telProspect" />
+                </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/TableRowAdresse"></TableRow>
+                    android:id="@+id/TableRowAdresse">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Adresse"
+                        android:id="@+id/adresse" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="New Text"
+                        android:id="@+id/adresseProspect" />
+                </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/TableRowPresence"></TableRow>
+                    android:id="@+id/TableRowPresence">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Presence"
+                        android:id="@+id/presence" />
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="New Switch"
+                        android:id="@+id/presenceProspect" />
+
+                </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/TableRowDateVisite"></TableRow>
+                    android:id="@+id/TableRowDateVisite">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Date de visite"
+                        android:id="@+id/dateVisite" />
+
+                    <DatePicker
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:calendarViewShown="false"
+                        android:datePickerMode="spinner"
+                        android:id="@+id/datePickerVisite" />
+
+                </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/TableRowConfiance"></TableRow>
+                    android:id="@+id/TableRowConfiance">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Confiance"
+                        android:id="@+id/confiance" />
+
+                    <RatingBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="5"
+                        android:progressTint="#ffdd25"
+                        android:id="@+id/ratingBarProspect" />
+
+                </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/TableRowLisibilite"></TableRow>
+                    android:id="@+id/TableRowLisibilite"
+                    android:measureWithLargestChild="false"
+                    android:nestedScrollingEnabled="false">
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/TableRowProblemes"></TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lisibilite"
+                        android:id="@+id/lisibilite" />
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rgLisibilite">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Lisible"
+                            android:id="@+id/lisibleOk"
+                            android:layout_weight="1" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Difficilement lisible"
+                            android:id="@+id/lisibleMoyen"
+                            android:layout_weight="1" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Illisible"
+                            android:id="@+id/lisibleKo"
+                            android:layout_weight="1" />
+                    </RadioGroup>
+
+                </TableRow>
+
             </TableLayout>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/TableRowProblemes">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Problemes"
+                    android:id="@+id/problemes" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/champProblemes" />
+
+            </TableRow>
 
             <LinearLayout
                 android:orientation="vertical"
@@ -67,28 +204,31 @@
                 android:layout_height="match_parent">
 
                 <Button
-                    android:layout_width="wrap_content"
+                    android:layout_width="333dp"
                     android:layout_height="wrap_content"
-                    android:text="New Button"
-                    android:id="@+id/button" />
+                    android:text=" Geolocalisation et geocodage"
+                    android:id="@+id/geoloc" />
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="vertical"
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:weightSum="1">
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="New Button"
-                    android:id="@+id/button2" />
+                    android:text="Valider"
+                    android:id="@+id/valider"
+                    android:layout_weight="0.40" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="New Button"
-                    android:id="@+id/button3" />
+                    android:text="Annuler"
+                    android:id="@+id/annuler"
+                    android:layout_weight="0.50" />
             </LinearLayout>
 
         </LinearLayout>

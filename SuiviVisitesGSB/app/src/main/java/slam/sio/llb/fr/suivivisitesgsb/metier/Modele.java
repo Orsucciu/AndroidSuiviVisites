@@ -5,7 +5,6 @@ import android.os.Environment;
 import com.db4o.Db4oEmbedded;
 import com.db4o.ObjectContainer;
 import com.db4o.ObjectSet;
-
 import java.io.File;
 import java.util.ArrayList;
 
