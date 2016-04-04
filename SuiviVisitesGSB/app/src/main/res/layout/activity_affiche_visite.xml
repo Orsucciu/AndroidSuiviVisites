@@ -91,8 +91,9 @@
                     <Switch
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="New Switch"
-                        android:id="@+id/presenceProspect" />
+                        android:id="@+id/presenceProspect"
+                        android:checked="false"
+                        android:layout_gravity="left" />
 
                 </TableRow>
 
@@ -132,7 +133,8 @@
                         android:layout_height="wrap_content"
                         android:numStars="5"
                         android:progressTint="#ffdd25"
-                        android:id="@+id/ratingBarProspect" />
+                        android:id="@+id/ratingBarProspect"
+                        android:stepSize="0.5" />
 
                 </TableRow>
 

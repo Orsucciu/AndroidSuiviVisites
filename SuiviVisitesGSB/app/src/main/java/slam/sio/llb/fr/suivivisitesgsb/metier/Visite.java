@@ -124,6 +124,10 @@ public class Visite {
 
     }
 
+    public Visite(){
+
+    }
+
     public Visite copieVisite(Visite v){
         this.present = v.present;
         this.dateVisite = v.dateVisite;

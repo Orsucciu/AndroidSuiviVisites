@@ -20,10 +20,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".AfficheVisites"
-            android:label="@string/title_activity_affiche_visites" >
-        </activity>
-        <activity
             android:name=".AfficheListeVisites"
             android:label="@string/title_activity_affiche_liste_visites" >
         </activity>

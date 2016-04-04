@@ -51,7 +51,7 @@ public class Modele {
     }
 
     public Visite trouveVisite(String id){
-        Visite laVisite = new Visite("", "", "", "", "");
+        Visite laVisite = new Visite();
         laVisite.setId(id);
         open();
         ObjectSet<Visite> result = dataBase.queryByExample(laVisite);
@@ -61,10 +61,13 @@ public class Modele {
     }
 
     public void saveVisite(Visite v){
+        Visite laVisite = new Visite();
+        laVisite.setId(v.getId());
         open();
-        Visite check = trouveVisite(v.getId());
-        if (check != null){
-            dataBase.store(check.copieVisite(v));
+        ObjectSet<Visite> result = dataBase.queryByExample(laVisite);
+        laVisite = (Visite) result.next();
+        if (laVisite != null){
+            dataBase.store(laVisite.copieVisite(v));
         }else{
             dataBase.store(v);
         }
@@ -94,7 +97,7 @@ public class Modele {
             dataBase.store(new Visite("1007", "Franchini ", "Marc", "19 Cours Général Leclerc 20000 Ajaccio", "0495103695"));
             dataBase.store(new Visite("1008", "Le Breton ", "Geneviève", "28 Boulevard Pascal Rossini 20000 Ajaccio", "0495200220"));
             dataBase.commit();
-            close();
         }
+        close();
     }
 }
