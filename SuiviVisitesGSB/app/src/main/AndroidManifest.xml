@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -26,6 +27,10 @@
         <activity
             android:name=".AfficheVisite"
             android:label="@string/title_activity_affiche_visite" >
+        </activity>
+        <activity
+            android:name=".Authentification"
+            android:label="@string/title_activity_authentification" >
         </activity>
     </application>
 
