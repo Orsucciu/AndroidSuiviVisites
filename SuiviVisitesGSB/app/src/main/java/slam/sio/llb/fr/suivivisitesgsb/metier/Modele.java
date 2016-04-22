@@ -19,8 +19,7 @@ public class Modele {
 
     public Modele() {
         createDirectory();
-
-    };
+    }
 
     public void createDirectory(){
         appDir = new File (Environment.getExternalStorageDirectory() + "/baseDB4o");

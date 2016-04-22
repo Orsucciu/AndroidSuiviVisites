@@ -132,8 +132,9 @@ public class Connexion extends AsyncTask<String, String, Boolean> {
                     ((Authentification) activiteAppelante.get()).retourVersAuthentification(stringBuilder);
                 }
 
-
-                // A complÈter pour les activitÈs Import et Export
+                if (nomClasseActiviteAppelante.contains("Importation")) {
+                    ((Importation) activiteAppelante.get()).retourImport(stringBuilder);
+                }
 
             } else
                 Toast.makeText(activiteAppelante.get(), "Fin ko", Toast.LENGTH_SHORT).show();

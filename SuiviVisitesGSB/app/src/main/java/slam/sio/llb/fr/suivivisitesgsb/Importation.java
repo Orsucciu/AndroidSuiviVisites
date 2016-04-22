@@ -70,17 +70,20 @@ public class Importation extends Activity {
         Gson gson = new GsonBuilder().setDateFormat("yyyy-mm-dd").create();
 
         for (JsonElement jsonEle : tabJSON){
-            listeVisites.add(gson.fromJson(jsonEle, Visite.class));
+            listeVisites.add(gson.fromJson(jsonEle.getAsJsonObject(), Visite.class));
         }
         // Si la liste contient visites alors on la sauvegarde dans la base DB4o
         if (!listeVisites.isEmpty()) {
+            md = new Modele();
             md.deleteVisite();
             md.addVisite(listeVisites);
             Toast.makeText(this, "Importation de donnÈes effectuÈe", Toast.LENGTH_SHORT).show();
+            setResult(Activity.RESULT_OK);
+            finish();
 
         } else {
-            Intent i = new Intent(getApplicationContext(), MainActivity.class);
-            startActivity(i);
+            setResult(Activity.RESULT_CANCELED);
+            finish();
         }
     }
 }
