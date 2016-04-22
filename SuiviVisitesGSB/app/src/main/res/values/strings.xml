@@ -7,4 +7,5 @@
     <string name="title_activity_affiche_liste_visites">AfficheListeVisites</string>
     <string name="title_activity_affiche_visite">AfficheVisite</string>
     <string name="title_activity_authentification">Authentification</string>
+    <string name="title_activity_importation">Importation</string>
 </resources>

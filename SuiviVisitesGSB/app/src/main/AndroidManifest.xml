@@ -32,6 +32,10 @@
             android:name=".Authentification"
             android:label="@string/title_activity_authentification" >
         </activity>
+        <activity
+            android:name=".Importation"
+            android:label="@string/title_activity_importation" >
+        </activity>
     </application>
 
 </manifest>

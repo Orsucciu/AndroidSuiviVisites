@@ -1,6 +1,7 @@
 package slam.sio.llb.fr.suivivisitesgsb.metier;
 
 import android.os.Environment;
+import android.util.Log;
 
 import com.db4o.Db4oEmbedded;
 import com.db4o.ObjectContainer;
@@ -18,8 +19,7 @@ public class Modele {
 
     public Modele() {
         createDirectory();
-        deleteVisite();
-        chargeJeuEssai();
+
     };
 
     public void createDirectory(){
@@ -75,11 +75,19 @@ public class Modele {
     }
 
     public void deleteVisite(){
-        ArrayList<Visite> retour = new ArrayList();
         open();
-        ObjectSet result = dataBase.queryByExample(Visite.class);
+        Log.i("erreur", "open ok");
+        ObjectSet<Visite> result = dataBase.queryByExample(Visite.class);
         while (result.hasNext()){
             dataBase.delete(result.next());
+        }
+        close();
+    }
+
+    public void addVisite(ArrayList<Visite> lesVistes){
+        open();
+        for (Visite v : lesVistes){
+            dataBase.store(v);
         }
         close();
     }
